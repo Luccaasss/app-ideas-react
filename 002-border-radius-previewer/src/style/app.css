@@ -1,0 +1,41 @@
+*, *:after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.border-box {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  border: 2px dashed black;
+}
+
+h1 {
+  text-align: center;
+  padding: 15px;
+}
+
+.App {
+  display: grid;
+  justify-content: center;
+}
+
+.output-container {
+  font-size: 2rem;
+  padding: 15px;
+  background-color: rgba(100, 148, 237, 0.555);
+  border-radius: 7px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 60px;
+}
