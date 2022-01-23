@@ -1,0 +1,40 @@
+.calculator-container {
+  width: 502px;
+  height: 846px;
+  margin-top: 30px;
+}
+
+.caculator-display {
+  width: 500px;
+  height: 220px;
+  background-color: white;
+  direction: rtl;
+  font-size: 10rem;
+}
+
+.calculator-button {
+  width: 125px;
+  height: 125px;
+  background-color: #191a1c;
+  color: azure;
+  font-size: 2.3rem;
+  border: none;
+  outline: none;
+}
+
+.calculator-button:active {
+  background-color: white;
+  color: black;
+}
+
+.zero-button {
+  width: 250px;
+}
+
+.action {
+  background-color: #242529;
+}
+
+.result-button {
+  background-color: #267e94;
+}
