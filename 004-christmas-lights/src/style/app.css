@@ -1,0 +1,115 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(25, 21, 26);
+}
+
+p {
+  color: white;
+  font-size: 3.6rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px;
+  text-transform: uppercase;
+}
+
+button {
+  font-size: 2.5rem;
+  padding: 15px;
+  margin: 50px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+}
+
+.veloctytext {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.light {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.light-red {
+  background-color: red;
+  animation: glow1 1s infinite;
+}
+
+.light-yellow {
+  background-color: yellow;
+  animation: glow2 1s infinite;
+}
+
+.light-blue {
+  background-color: blue;
+  animation: glow3 1s infinite;
+}
+
+.light-green {
+  background-color: green;
+  animation: glow4 1s infinite;
+}
+
+.controls {
+  display: grid;
+  justify-content: center;
+}
+
+
+@keyframes glow1 {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #f1160f;
+  }
+}
+
+@keyframes glow2 {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #f1e20f;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+@keyframes glow3 {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #0f38f1;
+  }
+}
+
+@keyframes glow4 {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #0b8339;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
