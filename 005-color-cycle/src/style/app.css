@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(to right, #4286f4, #373B44);
+}
+
+p {
+  font-size: 3rem;
+  font-family: 'Sora';
+  color: rgb(32, 43, 73);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.App {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.toggle-button {
+  padding: 5px;
+}
+
+.color-box {
+  width: 500px;
+  height: 500px;
+  background-color: tomato;
+  margin: 20px;
+  border: 2px solid #051c41;
+  border-radius: 8px;
+}
