@@ -6,4 +6,5 @@
 004 - Christmas lights \
 005 - Color Cycle \
 006 - Countdown timer \
-007 - CSV to JSON
+007 - CSV to JSON \
+008 - Dollars to cents

@@ -1,0 +1,28 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+div {
+  position: absolute;
+  font-size: 3rem;
+  color: rgb(0, 26, 255);
+  font-weight: bold;
+}
+
+.box01 {
+  z-index: 1000;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  transition: 1s;
+}
+
+.box01:hover {
+  transform: rotateY(180deg);
+}
