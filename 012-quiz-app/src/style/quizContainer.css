@@ -18,12 +18,47 @@
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-
+  border: 1px solid;
   font-weight: bold;
   color: white;
   background-color: rgb(71, 54, 221);
+  cursor: pointer;
 }
 
 .answer:hover {
   background-color: rgb(54, 39, 189);
+}
+
+.answer.active {
+  background-color: rgb(54, 39, 189);
+  border: 1px solid red;
+}
+
+button {
+  font-size: 2rem;
+  padding: .8rem 2.8rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(61, 104, 184);
+}
+
+button:disabled {
+  opacity: 0.8;
+  background-color: rgb(179, 184, 192)
+}
+
+.title-results {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.results {
+  font-size: 2rem;
 }

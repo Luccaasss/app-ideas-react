@@ -1,46 +1,59 @@
-import React, { useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import QuestionBar from './QuestionBar';
-import {QuestionsContext} from './App';
+import { QuestionsContext } from './App';
 
 export default function QuizContainer() {
   const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedIdAnswer, setSelectedIdAnswer] = useState(10);
 
   const {
-    apiQuestions, 
-    questionNumber, 
-    setQuestionNumber
+    apiQuestions,
+    questionNumber,
+    setQuestionNumber,
+    setRightAnswerCounter, 
+    rightAnswerCounter
   } = useContext(QuestionsContext)
 
   const {
-    category,
-    type,
-    difficulty,
     question,
     correct_answer,
-    incorrect_answers
+    incorrect_answers,
   } = apiQuestions[questionNumber];
 
   const allAnsers = [correct_answer, ...incorrect_answers].sort()
 
   return (
     <div>
-      <QuestionBar question={question}/>
+        <QuestionBar question={question} />
 
-      <div className='answers-box'>
-        {allAnsers.map((element, i) => 
-          <div 
-            className='answer'
-            onClick={() => {
-              setSelectedAnswer(element)
-              console.log(element)
-            }}
-            key={i}>{element}</div>)
-        }
+        <div className='answers-box'>
+          {allAnsers.map((element, i) =>
+            <div
+              className={`answer ${selectedIdAnswer === i ? 'active' : ''}`}
+              onClick={() => {
+                setSelectedAnswer(element)
+                setSelectedIdAnswer(i)
+                console.log(element)
+              }}
+              key={i}>{element}</div>)
+          }
+        </div>
+
+        <button
+          disabled={selectedIdAnswer === 10}
+          onClick={() => {
+            setQuestionNumber(questionNumber + 1)
+            setSelectedIdAnswer(10)
+            if (selectedAnswer === correct_answer) {
+              setRightAnswerCounter(rightAnswerCounter + 1)
+            }
+          }}>Next</button>
+
+        <div>
+          {rightAnswerCounter}
+          {correct_answer}
+        </div>
       </div>
+  ) 
 
-      <button onClick={() => {
-        setQuestionNumber(questionNumber + 1)
-      }}>+</button>
-    </div>
-  );
 }
